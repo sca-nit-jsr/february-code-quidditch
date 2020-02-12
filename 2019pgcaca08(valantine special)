@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+	int n,k,i;
+	scanf("%d %d", &n,&k);     
+	char m[n];
+	scanf("%s",m);
+	for(i=0;i<k;i++)
+	{
+	    if(i==0)
+	    {
+	        if(m[i]!=0)
+	            m[i]='1';
+	       else
+	        k=k+1;
+	    }
+	        
+	    else
+	    {
+	        if(m[i]!='0')
+	            m[i]='0';
+	       else
+	        k=k+1;
+	    }
+	}
+	
+	printf("%s",m);
+}
