@@ -1,0 +1,41 @@
+
+// Sample code to perform I/O:
+
+#include <iostream>
+using namespace std;
+int main() {
+long	int num;
+	int k;
+	cin >> num>>k;	
+	string s;
+	cin>>s;
+	char c[k];
+	int h[100000]={0};
+	for(int i=0;i<k;i++)
+	cin>>c[i];
+	for(int i=0;i<num;i++)
+	{
+	  h[s[i]]++;
+	}
+	int sum=0,su=0;
+	for(int i=0;i<k;i++)
+	{
+	    if(h[c[i]]>0)
+	    {
+	        sum=sum+(h[c[i]]*(h[c[i]]+1))/2;
+	        h[c[i]]=0;
+	    }
+    }
+    for(int i=0;i<num;i++)
+    {
+        if(h[s[i]]>0)
+        su=su+(h[s[i]]*(h[s[i]]+1))/2;
+        
+    }
+    cout<<sum-su;
+}
+
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+
+
+// Write your code here
