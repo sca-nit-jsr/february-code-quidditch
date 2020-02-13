@@ -1,0 +1,17 @@
+t=int(input());
+i=0;
+while t>0:
+    arg=[int(i) for i in input().split()]
+    arg.sort();
+    if(arg[0]==arg[1]==arg[2]):
+        pass;
+    elif(arg[0]==arg[1] and arg[1]<arg[2]):
+        arg[2]-=1;
+    else:
+        arg[2]-=1;
+        arg[0]+=1;
+    sum=abs(arg[0]-arg[1])+abs(arg[1]-arg[2])+abs(arg[2]-arg[0]);
+    print(sum);
+    t-=1;
+
+    
