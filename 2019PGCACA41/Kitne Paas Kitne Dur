@@ -1,0 +1,28 @@
+ #include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+	int num;
+	cin >> num;
+	int n[3];
+    while(num--)
+    {
+	    cin>>n[0] >>n[1]>> n[2];
+	    sort(n,n+3);
+	   if(n[0]==n[1]&&n[1]==n[2])
+	   {
+	     cout<<0<<endl;
+	     continue;
+	   }
+	    if(n[0]==n[1]&&n[2]>n[1])
+	    n[2]--;
+	    else
+	    {
+	        n[2]--;
+	        n[0]++;
+	    }
+	    cout<<abs(n[0]-n[1])+abs(n[1]-n[2])+abs(n[2]-n[0])<<endl;
+    }
+	return 0;
+}
