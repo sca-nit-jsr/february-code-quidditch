@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,k,i,count=0,sum=0;
+    cin>>n>>k;
+    char str[n],ch;
+    int hash[256]={0};
+    cin>>str;
+    for(i=0;i<k;i++)
+   { cin>>ch;
+     hash[ch]++;
+   }
+    
+    for(i=0;i<n+1;i++)
+    {
+        if(hash[str[i]]==1&&i<n)
+          count++;
+         else
+         {  sum+=(count*(count+1))/2;
+            count=0;
+             
+         }
+    }
+    cout<<sum;
+    return 0;
+}
