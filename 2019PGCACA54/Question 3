@@ -1,0 +1,127 @@
+
+// Sample code to perform I/O:
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int num,min=0,sum=0;
+	cin >> num;										// Reading input from STDIN
+	
+	long long int a,b,c;
+
+	for(int i=0;i<num;i++)
+	{
+	    	cin>>a>>b>>c;
+	if(a==b&&c-a<=2)
+	{
+	    cout<<"0"<<endl;
+	}
+	else
+	{
+	    if(a<b)
+	    {
+	        if(a<c)
+	        min=a;
+	        else
+	        min=c;
+	    }
+	    else
+	    {
+	        if(c>b)
+	        min=b;
+	        else
+	        min=c;
+	    }
+	}
+	    //d=min;
+	   if(min==a)
+	   {
+	       min=min+1;
+	       if((min==b&&c-min<=1)||(min==c&&b-min<=1))
+	       cout<<"0"<<endl;
+	        else if(min==b)
+	       {
+	       c=c-1;
+	        sum=abs(a-b)+abs(b-min)+abs(min-a);
+	           cout<<sum<<endl;
+	       }
+	       else if(min==c)
+	       {
+	           b=b-1;
+	            sum=abs(a-b)+abs(b-min)+abs(min-a);
+	           cout<<sum<<endl;
+	       }
+	       else
+	       {
+	           b=b-1;
+	           c=c-1;
+	           sum=abs(a-b)+abs(b-min)+abs(min-a);
+	           cout<<sum<<endl;
+	   
+	       }
+	        
+	   }
+	   else if(min==b)
+	   {
+	       min=min+1;
+	        if((min==a&&c-min<=1)||(min==c&&a-min<=1))
+	       cout<<"0"<<endl;
+	       else if(min==a)
+	       {
+	           c=c-1;
+	            sum=abs(a-b)+abs(b-min)+abs(min-a);
+	           cout<<sum<<endl;
+	       }
+	       else if(min==c)
+	       {
+	           a=a-1;
+	            sum=abs(a-b)+abs(b-min)+abs(min-a);
+	           cout<<sum<<endl;}
+	       else
+	       {
+	          a=a-1;
+	           c=c-1;
+	           sum=abs(a-b)+abs(b-min)+abs(min-a);
+	           cout<<sum<<endl;
+	   
+	       }
+	       
+	   }
+	    else if(min==c)
+	   {
+	       min=min+1;
+	        if((min==a&&b-min<=1)||(min==b&&a-min<=1))
+	       cout<<"0"<<endl;
+	       else if(min==a)
+	       
+	       {
+	           b=b-1;
+	            sum=abs(a-b)+abs(b-min)+abs(min-a);
+	           cout<<sum<<endl;}
+	       else if(min==b)
+	      {
+	          a=a-1;
+	           sum=abs(a-b)+abs(b-min)+abs(min-a);
+	           cout<<sum<<endl;}
+	       else
+	       {
+	           b=b-1;
+	           a=a-1;
+	           sum=abs(a-b)+abs(b-min)+abs(min-a);
+	           cout<<sum<<endl;
+	       }
+	       
+	   
+	   }
+	   
+	}
+	}
+	// Writing output to STDOUT
+
+
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+
+
+// Write your code here
