@@ -1,0 +1,14 @@
+arg=[int(i) for i in input().split()]
+num=list(input())
+i=0
+while (i<arg[1] and i<arg[0]):
+    if(i==0 and num[i]=='1'):
+        arg[1]+=1;
+    elif(i==0 and num[i]!='1'):
+        num[i]='1';
+    elif(num[i]=='0'):
+        arg[1]+=1;
+    else:
+        num[i]='0';
+    i+=1;
+print(''.join([str(ele) for ele in num]))
