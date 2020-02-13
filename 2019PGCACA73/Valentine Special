@@ -15,4 +15,4 @@ for i in range(0,m):
                 j=j+1
 s = [str(i) for i in list] 
 res = int("".join(s))
-print (res)
+print (res) 
