@@ -1,0 +1,30 @@
+//https://github.com/kapil484
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,k,c=0;
+    cin>>n>>k;
+    char ch[100000];
+    cin>>ch;
+    for(int i=0;i<n;i++)
+    {
+        if(k==c)
+        break;
+        if(ch[0]!='1')
+        {
+            ch[0]='1';
+            c++;
+            continue;
+        }
+        if(ch[i]!='0')
+        {
+            ch[i]='0';
+            c++;
+        }
+     
+    }
+    cout<<ch;
+    
+}
