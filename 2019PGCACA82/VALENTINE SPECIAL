@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,k;
+    string stt;
+    cin>>n>>k;
+    cin>>stt;
+    for(int j=0;j<k;j++)
+    {
+        if(j==0)
+           stt[j]='1';
+        else if(stt[j]=='0')
+        {
+           k=k+1;
+           continue;
+        }
+        else
+           stt[j]='0';
+    }
+    cout<<stt;
+    
+}
