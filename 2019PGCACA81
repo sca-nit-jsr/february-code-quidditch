@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,k;
+    cin>>n>>k;
+    char s[100000];
+    cin>>s;
+    s[0]='1';
+    int i=1;
+    while(k > 1 && i < n)
+    {
+        if(s[i] >= '1')
+        {
+            s[i]='0';
+            k--;
+        }
+        i++;
+    }
+    cout<<s<<endl;
+    return 0;
+}
