@@ -1,3 +1,36 @@
+
+ #include<iostream>
+#include<string.h>
+using namespace std;
+int main()
+{
+    int n,k,p=0,count=0;
+    cin>>n>>k;
+    string str;
+    int str1[27]={0};
+    char c;
+    cin>>str;
+    while(k--)
+    {
+        cin>>c;
+      str1[c-'a']++;
+    }
+    for(int i=0;i<n;i++)
+    {
+       if(str1[str[i]-'a'])
+       {
+           count++;
+       }
+       else
+       {
+           p+=(count*(count+1))/2;
+           count=0;
+       }
+    }
+     p+=(count*(count+1))/2;
+     cout<<p;
+     }
+=======
 #include<iostream>
 using namespace std;
 int main(){
@@ -15,3 +48,4 @@ int main(){
     }
     cout<<str;
 }
+
