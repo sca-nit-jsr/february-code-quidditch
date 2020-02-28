@@ -1,0 +1,28 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,k,hash[26]={0},c=0,sum=0;
+    char ch[100000],a;
+    cin>>n>>k>>ch;
+    for(int i=0;i<k;i++)
+    {
+        cin>>a;
+        hash[a-'a']++;
+    }
+    for(int i=0;ch[i]!='\0';i++)
+    {
+       if(hash[ch[i]-'a']>=1)
+       {
+           c++;
+       }
+       else
+       {
+           sum+=c*(c+1)/2;
+           c=0;
+       }
+    }
+    sum+=c*(c+1)/2;
+    cout<<sum;
+}
