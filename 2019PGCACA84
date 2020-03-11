@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+
+{
+
+    int m;
+
+    cin>>m;
+
+    int a[3];
+
+    while(m--){
+
+    cin>>a[0]>>a[1]>>a[2];
+
+    sort(a,a+3);
+
+    if(a[0]==a[1]&&a[1]==a[2])
+
+    {
+
+        cout<<0<<"\n";
+
+        continue;
+
+    }
+
+    else if(a[0]==a[1]&&a[2]>a[1])
+
+        {
+             a[2]=a[2]-1;
+
+        }
+
+        else
+        {
+            a[0]=a[0]+1;
+
+            a[2]=a[2]-1;
+
+        }
+
+            int sum=abs(a[0]-a[1])+abs(a[0]-a[2])+abs(a[1]-a[2]);
+
+            cout<<sum<<"\n";
+
+        }
+
+    }
