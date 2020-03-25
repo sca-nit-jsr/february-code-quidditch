@@ -1,0 +1,83 @@
+[8:33 PM, 2/13/2020] Hement Birla Jma: #include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+    int a,b,c,i;
+    int t;
+    cin>>t;
+    for(i=0;i<t;i++)
+    {
+        cin>>a>>b>>c;
+        if(a>b)
+        	a=(a+b)-(b=a);
+        if(b>c)
+            b=(b+c)-(c=b);
+        if(a>b)
+            a=(a+b)-(b=a);
+        if(a==b&&b==c)
+            cout<<"0"<<endl;
+        else if(a==b && b!=c)
+        {
+            c--;
+            cout<<abs(a-b)+abs(b-c)+abs(c-a)<<endl;
+        }
+        else if(a!=b && b!=c)
+        {
+            a++;
+            c--;
+            cout<<abs(a-b)+abs(b-c)+abs(c-a)<<endl;
+        }
+    }
+    return 0;
+}
+[8:34 PM, 2/13/2020] Hement Birla Jma: kitane dur kitane pass
+[8:34 PM, 2/13/2020] Dheeraj Patidar: Àa ja abb bbc me hu
+[8:34 PM, 2/13/2020] Hement Birla Jma: Aa raha
+[8:35 PM, 2/13/2020] Hement Birla Jma: 15 min me
+[8:35 PM, 2/13/2020] Dheeraj Patidar: Ok
+[10:31 PM, 2/13/2020] Dheeraj Patidar: reverse
+[10:31 PM, 2/13/2020] Dheeraj Patidar: #include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define max 10
+int top=-1;
+char s[max];
+char pop();
+void push(char);
+int main()
+{
+	char str[20];
+	int i;
+	printf("Enter tha string\n ");
+	gets(str);
+	for(i=0;i<strlen(str);i++)
+	push(str[i]);
+	for(i=0;i<strlen(str);i++)
+	str[i]=pop();
+	printf("reverse string\n");
+	puts(str);
+}
+void push(char item)
+{
+	if(top==max-1)
+	{
+		printf("overflow");
+		return;
+	}
+	top=top+1;
+	s[top]=item;
+}
+char pop()
+{
+	char item;
+	if(top==-1)
+	{
+		printf("underflow");
+		exit(1);
+	}
+	item=s[top];
+	top=top-1;
+	return item;
+}
+[10:36 PM, 2/13/2020] Hement Birla Jma: Aa gaya mere pass

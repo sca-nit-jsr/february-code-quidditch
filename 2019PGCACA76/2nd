@@ -1,0 +1,29 @@
+#I am having problem in this code it is passing only 1 test case and also the code length is too much want a precise and short solution
+#same I made in C++ that is perfectly submit
+
+
+c=[int(i) for i in input().split()]
+n,c=c[0],c[1]
+
+S=input()
+
+c=''.join([str(i) for i in input().split()])
+
+D={'a':0,'b':0,'c':0,'d':0,'e':0,'f':0,'g':0,'h':0,'i':0,'j':0,'k':0,'l':0,'m':0,'n':0,'o':0,'p':0,'q':0,'r':0,'s':0,'t':0,'u':0,'v':0,'x':0,'y':0,'z':0}
+#Code to hash using dictionary
+for i in c:
+    if i in list(D.keys()):
+        D[i]+=1
+    else:
+        D[i]=1
+
+i=count=Sum=0
+for i in range(len(S)):
+    if(D[S[i]] and i<n):
+        count+=1
+    else:
+        Sum+=count*(count+1)
+        count=0
+    i+=1
+
+print(Sum)
